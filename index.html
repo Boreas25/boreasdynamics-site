@@ -95,6 +95,11 @@ nav ul{grid-column:2;justify-self:center}
 .fact .v span{font-size:inherit;color:inherit}
 
 section{padding:80px 0}
+/* anchor offsets: land each section's eyebrow ~96px from the top, just under the header fade */
+#about,#contact{scroll-margin-top:16px}
+#capabilities{scroll-margin-top:96px}
+/* give the last section enough height that its anchor can reach the same spot as the others */
+#contact{min-height:calc(100vh - 116px);min-height:calc(100svh - 116px)}
 .eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
 h2{font-size:clamp(32px,5vw,46px);margin-bottom:20px}
 .about{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
@@ -117,7 +122,7 @@ footer .c{display:block;margin-top:6px;font-size:12px;letter-spacing:.18em}
   .about{grid-template-columns:1fr;gap:28px}
   .cols,.facts{grid-template-columns:1fr}
   .col+.col,.fact+.fact{border-left:0;border-top:1px solid var(--line)}
-  .hero{padding:52px 18px 40px} section{padding:56px 0}
+  .hero{padding:52px 18px 40px} section{padding:56px 0} #about,#contact{scroll-margin-top:40px}
 }
 @media(max-width:440px){ nav ul li:nth-child(2){display:none} }
 </style>
